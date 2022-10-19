@@ -1,0 +1,50 @@
+body {
+    background-color: #000000;
+}
+
+.top_rows_layer {
+    font-weight: bolder;
+}
+
+.rows_layer {
+    font-weight: 600;
+}
+
+.start {
+    background: white;
+    position: absolute;
+    background-color: #000000;
+    font-weight: 600;
+    padding: 15px;
+    margin: 108px -12rem;
+}
+
+.timing {
+    font-weight: 700;
+}
+
+.time_div {
+    padding-top: 10px;
+}
+
+.first_step,
+.second_step {
+    font-size: 29px;
+    font-weight: bolder;
+}
+
+.first_time {
+    opacity: 0.4;
+}
+
+.second_time {
+    opacity: 0.5;
+}
+
+.third_time {
+    opacity: 0.6;
+}
+
+.fourth_time {
+    opacity: 0.7;
+}

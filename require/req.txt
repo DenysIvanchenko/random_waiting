@@ -1,0 +1,66 @@
+would like to have a system to display numbers coupled randomly taken from a pool of given numbers, and show it on a screen with a countdown on the bottom lines and a sound coming through every time a new couple of numbers is up
+
+
+i have this urgent matter to solve and I'm not even sure I listed the correct requirements for it
+
+and for one event I need to organize a scoreboard like in the picture attached to the job description
+the thing is that this scoreboard must be animated and the pool of numbers is defined by the guest entrance to the event
+
+?: When the guest entrance, what input do?
+How can I define the pool of numbers by the guest entrance to the event?
+
+all this has to come out as a video output from a laptop
+so that I can share It on a separate screen
+the guests are given a number upon entering the event between 001 and 500
+the person doing the check in at the entrance must have a way to insert their number into the system I need to build
+they will have an iPad to do so
+and after a certain amount of time (ie 10 minutes) their number must come up on the scoreboard attached with a countdown
+and in less than 15 minute jump up to the first row
+
+that I have already a video system in place to share different video input, and one of these will be a laptop with this system running on it
+so basically I have a laptop dedicated to show this content
+
+and I will connect the laptop to my video management system, displaying the content on other screens
+
+so you have this 2 pages, one with the flaggable list and the other one with the timed output correct ?
+
+and when I flag a number, this number is inserted in a pool of numbers that will be coupled randomly
+
+and they go on the screen after approximately 10 minutes from the flagging, with a count down of 5 minutes
+
+what I am aiming to create is an active waiting list
+and I want that when the guests enter the event they are listed to play at these tables
+I can't as this is the all point of the event, is to unveil this new product slightly
+
+but I told you to give you the idea of why I have this extra layer of difficulty to randomly have the guests numbers coupled together like in the example shown
+cool, please note that the release of the milestones will be linked to the quality of what I can see, as you can imagine
+please do as I prefer you asking me questions before than try to recover some job already done
+
+the event will be divided in 4 time slots
+and we will have for the 2 days of event 1000 entrance badges numbered from 1 to 1000
+for every time slot we are waiting 250 guests
+so on the iPad a list of sequential increasing numbers should be ready to be flagged
+
+so let's say on the iPad I have a page with a grid of 250 numbers that can be flagged just pressing on them
+so when the hostess welcome the arriving guest delivers a badge with any of these 250 available numbers and flag the one corresponding into the iPad list
+and this triggers the system putting in hold the number for 10 minutes
+after which the number appears on the screen at the bottom line
+and coupled randomly to another guest number marked as arrived on the ipad
+when the countdown reaches 4 minutes the number goes up of a row
+and so on until it gets to the top of the list, and when it does so, the number flashes or do something visible (TBD) and a sound is released
+so that you are prompted to watch the screen and see if your number is up
+
+now the timing is not confirmed and may change, so having a control board where these values can be set would be amazing
+
+to have the guests playing to the football tables randomly, making sure that the rotation to the tables is automatic
+the event is huge, divided in many rooms, with screens showing this waiting list
+the football tables are in a room we call ARENA
+is the planning of how the players should be called at the tables
+and the timings we are looking for
+you can study what I wrote and come back to me with a list of questions, ok ?
+no rush
+at least not too much
+
+
+
+
