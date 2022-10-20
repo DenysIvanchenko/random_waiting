@@ -48,3 +48,47 @@ body {
 .fourth_time {
     opacity: 0.7;
 }
+
+.top-animation {
+    background-color: #FF4D99;
+    animation-name: example;
+    animation-duration: 6s;
+}
+
+@keyframes example {
+    0% {
+        background-color: #FF4D99;
+    }
+
+    10% {
+        background-color: #00A329;
+    }
+
+    20% {
+        background-color: #FF4D99;
+    }
+    30% {
+        background-color: #00A329;
+    }
+    40% {
+        background-color: #FF4D99;
+    }
+    50% {
+        background-color: #00A329;
+    }
+    60% {
+        background-color: #FF4D99;
+    }
+    70% {
+        background-color: #00A329;
+    }
+    80% {
+        background-color: #FF4D99;
+    }
+    90% {
+        background-color: #00A329;
+    }
+    100% {
+        background-color: #FF4D99;
+    }
+}

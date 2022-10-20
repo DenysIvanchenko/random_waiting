@@ -5,8 +5,10 @@
     <title>Enter</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="assets/css/bootstrap.min.css" rel="stylesheet"> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
@@ -52,7 +54,12 @@
                     date: Math.floor(Date.now() / 1000)
                 },
                 function(res) {
-                    location.href="score_board.php";
+                    console.log(res);
+                    if (res == "exist") {
+                        alert("Enter other number. The number has already exist.");
+                    } else {
+                        location.href="score_board.php";
+                    }
                 }
             );
         }

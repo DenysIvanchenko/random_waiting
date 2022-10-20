@@ -2,12 +2,18 @@
 require_once("db.php");
 if ($_POST) {
     if ($_POST['guest_number'] && $_POST['date']) {   //when enter, save
-        $sql = "INSERT INTO pool_list (number, date, step, order_num)
-        VALUES ('" . $_POST['guest_number'] . "', '" . $_POST['date'] . "', 0, 0)";
-        if ($conn->query($sql) === TRUE) {
-            //echo "enter ok";
+        $existSql = "SELECT * FROM pool_list WHERE number='" . $_POST['guest_number'] . "'";
+        $existResult = $conn->query($existSql);
+        if ($existResult->num_rows == 0) {
+            $sql = "INSERT INTO pool_list (number, date, step, order_num)
+            VALUES ('" . $_POST['guest_number'] . "', '" . $_POST['date'] . "', 0, 0)";
+            if ($conn->query($sql) === TRUE) {
+                //echo "enter ok";
+            } else {
+                echo "Error: " . $sql . "<br>" . $conn->error;
+            }
         } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
+            exit("exist");
         }
 
         $conn->close();
@@ -21,7 +27,9 @@ if ($_POST) {
     <title>Score board</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <!-- <link href="assets/css/bootstrap.min.css" rel="stylesheet"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
@@ -32,21 +40,21 @@ if ($_POST) {
     <div class="container">
 
         <h2 class="text-center display-1 fw-bolder" style="color:white;">
-            <div href="#" class="typewrite" data-period="2000" data-type='[ "ARENA.", "I love ARENA." ]'>
+            <!-- <div href="#" class="typewrite" data-period="2000" data-type='[ "ARENA.", "I love ARENA." ]'>
                 <span class="wrap"></span>
-            </div>
-
+            </div> -->
+            ARENA
         </h2>
 
         <div class="row mt-1 top">
-            <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6 text-white rounded-3" style="background-color:#FF4D99;width:48%;">
+            <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6 text-white rounded-3 top_layer" style="background-color:#FF4D99;width:48%;">
                 <span class="display-5" style="float: right;font-weight:500;">TABLE<br> <span class="table_num" style="float:right;"></span></span>
                 <span class="top_rows_layer display-1"><span id="top_step_first_order">READY TO</span><br> <span id="top_step_second_order">PLAY</span></span>
             </div>
             <div style="width:4%;">
                 <div class="start rounded-3 text-white display-2">DÉMARRER</div>
             </div>
-            <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6 text-white rounded-3" style="background-color:#FF4D99;width:48%;text-align:right;">
+            <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6 text-white rounded-3 top_layer_right" style="background-color:#FF4D99;width:48%;text-align:right;">
                 <span class=" display-5" style="float: left;font-weight:500;">TABLE<br> <span class="table_num_right" style="float:left;"></span></span>
                 <span class="top_rows_layer display-1"><span id="top_step_first_order_right">READY TO</span><br> <span id="top_step_second_order_right">PLAY</span></span>
             </div>
@@ -101,7 +109,7 @@ if ($_POST) {
         </div>
     </div>
 
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js?v2203"></script>
     <script>
         //made by vipul mirajkar thevipulm.appspot.com
         var TxtType = function(el, toRotate, period) {
